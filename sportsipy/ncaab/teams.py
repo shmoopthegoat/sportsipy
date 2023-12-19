@@ -7,9 +7,11 @@ from .conferences import Conferences
 from .ncaab_utils import _retrieve_all_teams
 from .roster import Roster
 from .schedule import Schedule
-
+import time
 
 class Team:
+    time.sleep(10)
+    print('sleeping')
     """
     An object containing all of a team's season information.
 
