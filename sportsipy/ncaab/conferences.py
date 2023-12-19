@@ -3,7 +3,8 @@ import re
 from urllib.error import HTTPError
 from .. import utils
 from .constants import CONFERENCE_URL, CONFERENCES_URL
-import time
+from .APICHECK import check_limit
+
 
 class Conference:
     """
@@ -99,6 +100,7 @@ class Conference:
         year : string
             A string of the requested year to pull conference information from.
         """
+        check_limit()
         if not year:
             year = utils._find_year_for_season('ncaab')
             # If stats for the requested season do not exist yet (as is the
