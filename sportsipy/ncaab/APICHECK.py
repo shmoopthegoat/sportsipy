@@ -7,4 +7,4 @@ RATE_LIMIT = 60
 @limits(calls = CALLS, period = RATE_LIMIT)
 def check_limit():
     'empty'
-return
+    return
