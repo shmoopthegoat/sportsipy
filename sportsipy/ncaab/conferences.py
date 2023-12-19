@@ -183,8 +183,6 @@ class Conferences:
         PyQuery object
             Returns a PyQuery object of the conference HTML page.
         """
-        time.sleep(20)
-        print('sleeping')
         try:
             return pq(url=CONFERENCES_URL % year)
         except HTTPError:
