@@ -6,8 +6,6 @@ from .constants import CONFERENCE_URL, CONFERENCES_URL
 import time
 
 class Conference:
-    time.sleep(20)
-    print('sleeping')
     """
     Find teams that participated in a particular conference.
 
@@ -185,6 +183,8 @@ class Conferences:
         PyQuery object
             Returns a PyQuery object of the conference HTML page.
         """
+        time.sleep(20)
+        print('sleeping')
         try:
             return pq(url=CONFERENCES_URL % year)
         except HTTPError:
